@@ -8,7 +8,7 @@ pipeline {
         '''
           sh 'echo Hi chidubem'
 
-
+        '''
       }
     }
   }
