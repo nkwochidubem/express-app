@@ -12,6 +12,7 @@ pipeline {
                 echo Hi chidubem
                 aws --version
                 aws ec2 describe-instances
+                aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/k9u4f0a6
             '''
       }
     }
