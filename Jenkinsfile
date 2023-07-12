@@ -21,7 +21,20 @@ pipeline {
       }
     }
 
+    stage('Tag Build') {
+      steps {
+        sh 'docker tag express-app:latest public.ecr.aws/k9u4f0a6/my-docker-repo:latest'
+        
+      }
 
+    }
+
+    stage('Push Build'){
+      steps {
+        sh 'docker push public.ecr.aws/k9u4f0a6/express-app:latest'
+      }
+    
+    }
 
   }
 }
