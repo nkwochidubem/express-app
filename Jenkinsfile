@@ -6,10 +6,8 @@ pipeline {
   stages {
     stage('checkout repo') {
       steps {
-        '''
           sh 'ls -al'
           sh 'echo Hi chidubem'
-        '''
       }
     }
   }
