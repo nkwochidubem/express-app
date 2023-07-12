@@ -1,7 +1,8 @@
 pipeline {
   agent { label 'master'}
   environment {
-    AWS_CRED=credentials('nkwochidubem_aws_cred')  
+    AWS_DEFAULT_REGION="us-east-1"
+    test_cred=credentials('nkwochidubem-aws-cred')
   }
   stages {
     stage('checkout repo') {
