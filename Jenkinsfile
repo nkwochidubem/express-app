@@ -6,8 +6,12 @@ pipeline {
   stages {
     stage('checkout repo') {
       steps {
-          sh 'ls -al'
-          sh 'echo Hi chidubem'
+          sh '''
+                ls -al
+                echo Hi chidubem
+                aws --version
+                aws ec2 describe-instances
+            '''
       }
     }
   }
