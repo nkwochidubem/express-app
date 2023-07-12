@@ -1,4 +1,5 @@
 pipeline {
+  agent { label 'master'}
   environment {
     AWS_CRED=credentials('nkwochidubem_aws_cred')  
   }
